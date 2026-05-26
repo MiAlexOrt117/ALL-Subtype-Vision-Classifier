@@ -75,31 +75,6 @@ Estos son resultados de referencia obtenidos en ejecuciones previas del proyecto
 
 Los métodos supervisados fueron claramente más adecuados para clasificación final que los métodos no supervisados. El aprendizaje no supervisado aportó una lectura exploratoria de la estructura latente, pero no reemplaza a los clasificadores entrenados con etiquetas.
 
-## Estructura del repositorio
-
-```text
-.
-├── Notebook_Final_Unificado_Leucemia_IA.ipynb
-├── leukemia_handcrafted_features (1).csv
-├── leukemia_feature_ranking (1).csv
-├── model_comparison_results (1).csv
-├── requirements.txt
-├── outputs/
-│   ├── kaggle_run/
-│   │   └── archivos generados por la nueva ejecución
-│   └── final_notebook/
-│       ├── cm_svm_linear.png
-│       ├── dnn_features_accuracy_curve.png
-│       ├── dnn_features_confusion_matrix.png
-│       └── ...
-└── unsupervised_outputs/
-    ├── clustering_comparison.csv
-    ├── final_comparison_all_models.csv
-    ├── pca_2d_visualization.png
-    ├── pca_3d_visualization.png
-    └── ...
-```
-
 Los archivos CSV con sufijo `(1)` quedan como resultados históricos del trabajo previo. El notebook final actual no depende de ellos.
 
 ## Cómo ejecutar
