@@ -6,7 +6,7 @@ El entregable principal es:
 
 `Notebook_Final_Unificado_Leucemia_IA.ipynb`
 
-Este notebook integra los cuatro notebooks originales del proyecto en una versión final, limpia, explicativa y defendible académicamente.
+Este notebook integra los cuatro notebooks originales del proyecto en una versión final, limpia, explicativa y defendible académicamente. La versión actual **no carga CSVs generados previamente**: descarga el dataset desde Kaggle y recalcula las features y resultados durante la ejecución.
 
 ## Dataset
 
@@ -40,7 +40,7 @@ El pipeline final está organizado así:
 6. Aprendizaje no supervisado con PCA, K-Means, DBSCAN y clustering jerárquico.
 7. Comparación global y conclusiones.
 
-La DNN final usa variables extraídas previamente; no usa CNN, transfer learning ni autoencoders.
+La DNN final usa variables extraídas en la misma ejecución; no usa CNN, transfer learning ni autoencoders.
 
 ## Modelos usados
 
@@ -59,7 +59,7 @@ La DNN final usa variables extraídas previamente; no usa CNN, transfer learning
 
 ## Resultados principales
 
-No se inventaron métricas; los valores provienen de los CSVs y salidas revisadas de los notebooks.
+Estos son resultados de referencia obtenidos en ejecuciones previas del proyecto. Al ejecutar el notebook desde Kaggle, las métricas se recalculan desde cero y pueden variar levemente por versiones de librerías o entorno.
 
 | Enfoque | Mejor resultado reportado |
 |---|---|
@@ -76,16 +76,14 @@ Los métodos supervisados fueron claramente más adecuados para clasificación f
 
 ```text
 .
-├── EDA_leucemia_unificado_Colab.ipynb
-├── Notebook_Maestro_Leucemia_Clasificacion (1).ipynb
-├── Notebook_Maestro_DNN_Leucemia_Parte3 (1).ipynb
-├── Parte4_NoSupervisado_Leucemia.ipynb
 ├── Notebook_Final_Unificado_Leucemia_IA.ipynb
 ├── leukemia_handcrafted_features (1).csv
 ├── leukemia_feature_ranking (1).csv
 ├── model_comparison_results (1).csv
 ├── requirements.txt
 ├── outputs/
+│   ├── kaggle_run/
+│   │   └── archivos generados por la nueva ejecución
 │   └── final_notebook/
 │       ├── cm_svm_linear.png
 │       ├── dnn_features_accuracy_curve.png
@@ -99,7 +97,7 @@ Los métodos supervisados fueron claramente más adecuados para clasificación f
     └── ...
 ```
 
-Los sufijos como `(1)` se conservan porque así aparecen los archivos en esta copia local. El notebook final los detecta automáticamente mediante búsqueda robusta.
+Los archivos CSV con sufijo `(1)` quedan como resultados históricos del trabajo previo. El notebook final actual no depende de ellos.
 
 ## Cómo ejecutar
 
@@ -110,9 +108,9 @@ Los sufijos como `(1)` se conservan porque así aparecen los archivos en esta co
 pip install -r requirements.txt
 ```
 
-3. Verificar que los CSVs de features y resultados estén en la carpeta del proyecto.
-4. Ejecutar las celdas en orden.
-5. Si se desea reentrenar la DNN, cambiar `RUN_DNN_TRAINING = True` dentro del notebook.
+3. Ejecutar las celdas en orden. El notebook descargará el dataset con `kagglehub.dataset_download("mehradaria/leukemia")`.
+4. Si se desea una prueba rápida, cambiar `USE_SUBSET = True` al inicio del notebook.
+5. Los resultados generados se guardan en `outputs/kaggle_run/`.
 
 ## Conclusión
 
