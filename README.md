@@ -1,3 +1,6 @@
+
+<img width="1024" height="682" alt="ProyectoIA" src="https://github.com/user-attachments/assets/6b785b24-702c-48d9-9f09-4081dd63f805" />
+
 # Detección y subtipificación de leucemia linfoblástica aguda usando técnicas de inteligencia artificial
 
 Proyecto universitario de Inteligencia Artificial aplicado a imágenes microscópicas de frotis de sangre periférica para detección y subtipificación de leucemia linfoblástica aguda (ALL).
