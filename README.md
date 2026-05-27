@@ -93,3 +93,6 @@ pip install -r requirements.txt
 ## Conclusión
 
 Las características handcrafted contienen información suficiente para construir clasificadores de alto desempeño sobre este dataset. SVM y Random Forest fueron especialmente competitivos; la DNN densa fue útil como comparación neuronal sin usar imágenes crudas. En una aplicación real, el reto principal sería validar externamente con imágenes de otros hospitales, microscopios, cámaras y condiciones de tinción.
+
+VIDEO: https://youtu.be/ylwaWIf1Zh4
+PRESENTACIÓN: https://canva.link/jlrr52hazdr8pue
